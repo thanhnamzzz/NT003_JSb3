@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập tính lãi suất ngân hàng</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let borrow, rate, year, money;
+    rate = 0.04;
+    borrow = +prompt("Số tiền gửi tiết kiệm (VND)");
+    year = +prompt("Số năm gửi tiết kiệm");
+    money = borrow + borrow * rate * year;
+    document.write("Gửi " + borrow + " VND sau " + year + " năm nhận được " + money + " VND");
+</script>
+</html>
