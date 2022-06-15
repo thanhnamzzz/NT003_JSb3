@@ -15,5 +15,15 @@
     year = prompt("Năm");
     month = prompt("Tháng");
     days = prompt("Ngày");
-    document.write("Ngày " + days + " tháng " + month + " năm " + year);
+    if ( month > 0 && month < 13) {
+        if ( days > 0 && days < 32) {
+            document.write("Ngày " + days + " tháng " + month + " năm " + year);
+        }
+        else {
+            days = prompt("Nhập lại ngày");
+        }
+    }
+    else {
+        month = prompt("Nhập lại tháng");
+    }
 </script>
