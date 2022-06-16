@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập viết thư</title>
+    <style>
+        body {
+            background-image: url('image/hinh-nen-tinh-yeu-10.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+        <td><input type="text" placeholder="Nhập tên người nhận" id="name"></td>
+        <td><input type="text" placeholder="Nhập địa điểm" id="addr"></td>
+        <td><input type="date" placeholder="Nhập ngày" id="date"></td>
+        <td><button onclick="letter()">Viết thư</button></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td rowspan="5" style="width: 200px;"></td>
+            <td style="color:red;width: 1000px;font-size: 30px;"><i><p id="result1"></p></i></td>
+        </tr>
+        <tr>
+            <td style="color:red;width: 1000px;font-size: 20px;"><i><p id="result2"></p></i></td>
+        </tr>
+        <tr>
+            <td style="color:red;width: 1000px;font-size: 20px;"><i><p id="result3"></p></i></td>
+        </tr>
+        <tr>
+            <td style="color:red;width: 1000px;font-size: 20px;"><i><p id="result4"></p></i></td>
+        </tr>
+        <tr>
+            <td style="color:red;width: 1000px;font-size: 20px;text-align: right;"><i><p id="result5"></p></i></td>
+        </tr>
+    </table>
+</body>
+<script src="js_vietthu.js"></script>
+</html>
