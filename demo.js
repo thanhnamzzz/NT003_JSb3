@@ -9,10 +9,4 @@
 // else {
 //     document.write("Số " + n1 + n2 + n3 + " không chia hết cho 3");
 // }
-let str = prompt("Nhập số");
-let arr = str.split("");
-let sum = 0;
-arr.forEach(function(element){
-    sum +=element;
-});
-console.log(sum);
+function sub ()
