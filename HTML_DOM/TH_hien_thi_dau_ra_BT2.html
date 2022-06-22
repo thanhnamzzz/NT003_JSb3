@@ -4,21 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hiển thị đầu ra - Bài 2</title>
 </head>
 <body>
-    
+    <button type="button" onclick="showmess()">Click me!</button>
+    <div id="mess"></div>
 </body>
 </html>
 <script>
-    let num = prompt("Nhập số");
-    if (num > 10) {
-        if (num % 2 == 0) {
-            alert(num);
-        } else {
-            alert("Nhập lại");
-        }
-    } else {
-        alert("Nhập lại");
+    function showmess() {
+        document.getElementById("mess").innerHTML = "Xin chào!";
     }
 </script>
