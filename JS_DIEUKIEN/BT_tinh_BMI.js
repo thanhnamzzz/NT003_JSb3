@@ -2,7 +2,7 @@ function check() {
     let weight, hight, bmi;
     weight = document.getElementById("weight").value;
     hight = document.getElementById("hight").value;
-    bmi = weight / Math.round((Math.pow(hight,2)), 2);
+    bmi = weight / Math.pow(hight,2);
     let result = "";
     if (bmi < 16) {
         result = "gầy độ 3";
@@ -21,6 +21,6 @@ function check() {
     } else {
         result = "Béo phì độ 3";
     }
-    document.getElementById("check").innerHTML = "Chỉ số BMI = " + bmi + ". Bạn " + result;
+    document.getElementById("check").innerHTML = "Chỉ số BMI = " + bmi.toFixed(2) + ". Bạn " + result;
 }
 
