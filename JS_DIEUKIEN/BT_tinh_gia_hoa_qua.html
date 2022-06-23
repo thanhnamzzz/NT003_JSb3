@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập tính giá hoa quả</title>
+</head>
+<body>
+    <h2><b>Giá hoa quả</b></h2><br>
+    <select name="fruit" id="cost">
+        <option value="Ổi">Ổi</option>
+        <option value="Dưa hấu">Dưa hấu</option>
+        <option value="Táo">Táo</option>
+        <option value="Xoài">Xoài</option>
+        <option value="Cam">Cam</option>
+        <option value="Chôm chôm">Chôm chôm</option>
+        <option value="Măng cụt">Măng cụt</option>
+    </select><span>
+        <button type="button" onclick="check()">Xem giá</button>
+    </span><br><br>
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    function check() {
+        let fruit = document.getElementById("cost").value;
+        let cost = "";
+        if (fruit == "Ổi") {
+            cost = 20000;
+        } else if (fruit == "Dưa hấu") {
+            cost = 20000;
+        } else if (fruit == "Táo") {
+            cost = 30000;
+        } else if (fruit == "Xoài") {
+            cost = 30000;
+        } else if (fruit == "Cam") {
+            cost = 40000;
+        } else if (fruit == "Chôm chôm") {
+            cost = 40000;
+        } else {
+            cost = 50000;
+        }
+        document.getElementById("result").innerHTML = "Giá " + fruit + " là: " + cost + " VNĐ/kg";
+    }
+</script>
