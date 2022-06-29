@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm thi đại học khối D</title>
+</head>
+<body>
+    <h2><b>Tính điểm thi Đại học khối D</b></h2>
+    <table>
+        <tr>
+            <td style="width: 100px;">Môn Toán</td>
+            <td><input type="number" style="width: 100px;" id="mtoan"></td>
+        </tr>
+        <tr>
+            <td style="width: 100px;">Môn Văn</td>
+            <td><input type="number" style="width: 100px;" id="mvan"></td>
+        </tr>
+        <tr>
+            <td style="width: 100px;">Môn Anh</td>
+            <td><input type="number" style="width: 100px;" id="manh"></td>
+        </tr>
+        <tr>
+            <td style="width: 100px;">Khu vực</td>
+            <td>
+                <select name="area" id="khuvuc">
+                    <option value="KV1">KV1</option>
+                    <option value="KV2">KV2</option>
+                    <option value="KV2A">KV2-NT</option>
+                    <option value="KV3">KV3</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <button onclick="tinhdiem()">Tính điểm</button><br>
+    <p id="result"><i></i></p>
+</body>
+</html>
+<script>
+    function tinhdiem() {
+        let mtoan, mvan, manh, result, khuvuc, dkv;
+        mtoan = +document.getElementById("mtoan").value;
+        mvan = +document.getElementById("mvan").value;
+        manh = +document.getElementById("manh").value;
+        khuvuc = document.getElementById("khuvuc").value;
+        switch (khuvuc) {
+            case `KV1`:
+                dkv = 0.75;
+                break;
+            case `KV2`:
+                dkv = 0.5;
+                break;
+            case `KV2A`:
+                dkv = 0.25;
+                break;
+            case `KV3`:
+                dkv = 0;
+                break;
+        }
+        result = mtoan + mvan + manh + dkv;
+        document.getElementById("result").innerHTML = `Tổng điểm Đại học khối D của bạn là: ` + result;
+    }
+</script>
