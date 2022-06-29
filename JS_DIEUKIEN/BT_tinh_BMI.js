@@ -21,6 +21,5 @@ function check() {
     } else {
         result = "Béo phì độ 3";
     }
-    document.getElementById("check").innerHTML = "Chỉ số BMI = " + bmi.toFixed(2) + ". Bạn " + result;
+    document.getElementById("check").innerHTML = "Chỉ số BMI = ", bmi.toFixed(2) , ". Bạn " , result;
 }
-

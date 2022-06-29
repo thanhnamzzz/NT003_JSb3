@@ -3,10 +3,10 @@ function check() {
     let divi = num % 2;
     var result = "";
     if (divi == 0) {
-        result = "Số " + num + " là số chẵn";
+        result = "Số " , num , " là số chẵn";
     }
     else {
-        result = "Số " + num + " là số lẻ";
+        result = "Số ", num , " là số lẻ";
     }
 document.getElementById("result").innerHTML = result;
 }
