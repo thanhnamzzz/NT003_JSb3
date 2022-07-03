@@ -46,51 +46,71 @@
 </html>
 <script>
     function doitien() {
-        debugger
         let n1, n2, n3, donvi1, donvi2, a;
+        debugger
         n1 = +document.getElementById("money").value;
         n2 = document.getElementById("fc").value;
         n3 = document.getElementById("tc").value;
-        if (n2 == "vn") {
-            if (n3 == "vn") {
-                a = 1;
-            } else if (n3 == "japan") {
-                a = 0.0058;
-            } else if (n3 == "usa") {
-                a = 0.000043;
+        if (n2 = "vn") {
+            switch (n3) {
+                case "vn":
+                    a = 1;
+                    break;
+                case "japan":
+                    a = 0.0058;
+                    break;
+                case "usa":
+                    a = 0.000043;
+                    break;
             }
-        } else if (n2 == "japan") {
-            if (n3 == "vn") {
-                a = 173;
-            } else if (n3 == "japan") {
-                a = 1;
-            } else if (n3 == "usa") {
-                a = 0.0074;
+        } else if (n2 = "japan") {
+            switch (n3) {
+                case "vn":
+                    a = 173;
+                    break;
+                case "japan":
+                    a = 1;
+                    break;
+                case "usa":
+                    a = 0.0074;
+                    break;
             }
-        } else if (n2 == "usa") {
-            if (n3 == "vn") {
-                a = 23315;
-            } else if (n3 == "japan") {
-                a = 135;
-            } else if (n3 == "usa") {
-                a = 1;
+        } else {
+            switch (n3) {
+                case "vn":
+                    a = 23315;
+                    break;
+                case "japan":
+                    a = 135;
+                    break;
+                case "usa":
+                    a = 1;
+                    break;
             }
         }
-        if (n2 == "vn") {
-            donvi1 = "₫ - VNĐ";
-        } else if (n2 == "japan") {
-            donvi1 = "¥ - JPY";
-        } else if (n2 == "usa") {
-            donvi1 = "$ - USD";
+        switch (n2) {
+            case "vn":
+                donvi1 = "₫ - VNĐ";
+                break;
+            case "japan":
+                donvi1 = "¥ - JPY";
+                break;
+            case "usa":
+                donvi1 = "$ - USD";
+                break;
         }
-        if (n3 == "vn") {
-            donvi2 = "₫ - VNĐ";
-        } else if (n3 == "japan") {
-            donvi2 = "¥ - JPY";
-        } else if (n3 == "usa") {
-            donvi2 = "$ - USD";
+        switch (n3) {
+            case "vn":
+                donvi2 = "₫ - VNĐ";
+                break;
+            case "japan":
+                donvi2 = "¥ - JPY";
+                break;
+            case "usa":
+                donvi2 = "$ - USD";
+                break;
         }
         let quydoi = n1 * a;
-        document.getElementById("result").innerHTML = n1 + ` ` + donvi1 + ` = ` + quydoi + ` ` + donvi2;
+        document.getElementById("result").innerHTML = n1 + ` ` + donvi1 + ` = ` + quydoi.toFixed(2) + ` ` + donvi2;
     }
 </script>
