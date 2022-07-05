@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập game đoán số</title>
+</head>
+<body>
+    <button onclick="game()">Chơi</button>
+</body>
+</html>
+<script>
+    function game() {
+        alert("Hãy nhập khoảng số muốn chơi!");
+        let num1, num2, rand, select, i = 2;
+        num1 = +prompt("Nhập số thứ nhất:");
+        num2 = +prompt("Nhập số thứ 2:");
+        if (num1 < num2) {
+            rand = Math.trunc(Math.random() * (num2 - num1 + 1) + num1);
+            alert("Bạn có 3 lượt.");
+            select = +prompt ("Nhập số muốn chọn:");
+            while (select !== rand) {
+                alert("Đoán sai! Bạn còn " + i + " lượt.");
+                if (i == 0){
+                break;
+                }
+                select = +prompt ("Đoán lại:");
+                i--;
+            }
+            if (select == rand) {
+                alert ("Chính xác!");
+            } else{
+                alert("Kết thúc! Bạn không đoán đúng.");
+            }
+        } else {
+            rand = Math.trunc(Math.random() * (num1 - num2 + 1) + num2);
+            alert("Bạn có 3 lượt.");
+            select = +prompt ("Nhập số muốn chọn:");
+            while (select !== rand) {
+                alert("Đoán sai! Bạn còn " + i + " lượt.");
+                if (i == 0){
+                break;
+                }
+                select = +prompt ("Đoán lại:");
+                i--;
+            }
+            if (select == rand) {
+                alert ("Chính xác!");
+            } else{
+                alert("Kết thúc! Bạn không đoán đúng.");
+            }
+        }
+    }
+</script>
