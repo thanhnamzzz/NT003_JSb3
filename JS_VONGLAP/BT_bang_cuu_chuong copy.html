@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập bảng cửu chương</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td style="width:200px;">Nhập bảng nhân từ 1 tới:</td>
+            <td style="width:200px">Nhập phạm vi bảng</td>
+        </tr>
+        <tr>
+            <td><input type="number" style="width: 200px;" id="a"></td>
+            <td><input type="number" style="width: 200px;" id="b"></td>
+        </tr>
+    </table>
+    <button onclick="xuatbang()">Xuất bảng</button><br>
+    <p id="result"></p>
+</body>
+</html>
+<script>
+    function xuatbang() {
+        let a, b;
+        a = +document.getElementById("a").value;
+        b = +document.getElementById("b").value;
+        let tab = "";
+        // debugger;
+        let j = 1;
+        // let i = 1;
+        while (j <= b) {
+            let i = 1;
+            while (i <= a) {
+                tab = tab + i + " * " + j + " = " + i * j + "<br>";
+                i++;
+            }
+            j++;
+        }
+        document.getElementById("result").innerHTML= tab;
+    }
+</script>
