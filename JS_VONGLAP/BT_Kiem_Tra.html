@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài kiểm tra</title>
+</head>
+<body>
+    <button onclick="login()">Đăng nhập</button>
+</body>
+</html>
+<script>
+    function login() {
+        let password, psd = 12345, i = 4;
+        alert("Bạn có 5 lần đăng nhập.");
+        password = prompt("Nhập mật khẩu:");
+        while (password != psd) {
+            alert("Sai mật khẩu! Bạn còn " + i + " lượt.");
+            if (i == 0){
+            break;
+            }
+            password = +prompt ("Nhập lại mật khẩu:");
+            i--;
+        }
+        if (password == psd) {
+            alert ("Đăng nhập thành công!");
+        } else{
+            alert("Mật khẩu không chính xác. Tài khoản đã bị khóa!");
+        }
+        }
+</script>
