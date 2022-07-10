@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập in số đảo ngược</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let number = +prompt("Nhập số:");
+    let sdc = "";
+    // debugger;
+    for (i = 1;; i++) {
+        sdc += number % 10;
+        number = Math.floor(number / 10);
+        if (number == 0){
+            break;
+        }
+    }
+    document.write(sdc);
+</script>
