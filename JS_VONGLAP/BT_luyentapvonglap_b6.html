@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập luyện tập vòng lặp - Bài 6</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let total = 0;
+    let count = 0;
+    for (i = 1;; i++) {
+        if (i % 7 == 0 ){
+            total += i;
+            count += 1;
+            if (count == 30) {
+                break;
+            }
+        }
+    }
+    document.write("Tổng của 30 số tự nhiên đầu tiên chia hết cho 7 là "+ total);
+</script>
