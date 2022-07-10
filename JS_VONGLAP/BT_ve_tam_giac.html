@@ -16,8 +16,39 @@
         tg = "*" + tg;
         document.write(tg,`<br>`);
     }
-    for (let i = 1; i <= 5; i++) {
-        tg = "<hr width=>" + "*" + "%>"
-        document.write(tg,`<br>`);
+    document.write("<br>");
+    // // debugger;
+    for (let i = 5; i >= 1; i--) {
+        for (j = i; j >= 1; j--) {
+            document.write("*");
+        }
+        document.write("<br>");
     }
+    document.write("<br>");
+    // debugger;
+    for (let i = 1; i <= 5; i++) {
+        for (j = 5 ; j > i; j--) {
+            document.write("&ensp;");
+            //ở đoạn này ta sử dụng vòng lặp in ra khoảng trắng
+            //tạo 1 khoảng trắng trong html thì dung &nbsp
+            //nhưng ở bài này 1 khoảng trắng có độ dài bằng nửa ký tự * nên sử dụng &nbsp+&nbsp
+            //hoặc &ensp để tạo 2 khoảng trắng
+            //3 khoảng trắng là &emsp
+        }
+        for (k = 1 ; k <= i; k++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+    for (let i = 1; i <= 5; i++) {
+        for (j = 1 ; j < i; j++) {
+            document.write("&ensp;");
+        }
+        for (k = 5 ; k >= i; k--) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
 </script>
