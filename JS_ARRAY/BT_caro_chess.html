@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập tạo bàn cờ caro đơn giản</title>
+</head>
+<body>
+    <h3>Caro games simple</h3>
+    <p>Nhập số hàng: </p><input type="number" id="row"><br>
+    <p>Nhập số cột: </p><input type="number" id="col"><br>
+    <input type="button" value="Xuất ô bảng" onclick="changevalue()">
+    <p id="carogame"></p><br>
+</body>
+</html>
+<script>
+    // debugger;
+        function changevalue() {
+            let c = document.getElementById("carogame"), data = "";
+            let row = +document.getElementById("row").value;
+            let col = +document.getElementById("col").value;
+            let board = new Array(row).fill(new Array(col));
+            let positionX = prompt("tọa độ X:");
+            let positionY = prompt("tọa độ Y:");
+            for (i = 0; i < board.length; i++) {
+                data += "<br>";
+                for (j = 0; j < board[i].length; j++) {
+                    if (i == positionY && j == positionX){
+                    data += "x" + "&ensp;";
+                    } else {
+                        data += "*"+ "&ensp;";
+                    }
+                }
+            }
+            data += "<br><br><input type='button' value='Nhập tọa độ điểm' onclick='changevalue()'>"
+            c.innerHTML = data;
+        }
+</script>
