@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3 - upper and lower</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let str = prompt("Nhập dãy kí tự");
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lower = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+    // debugger;
+    for(let x = 0; x < str.length; x++){
+        if(UPPER.indexOf(str[x]) !== -1) {
+            result.push(str[x].toLowerCase());
+        } else if(lower.indexOf(str[x]) !== -1){
+            result.push(str[x].toUpperCase());
+        } else {
+            result.push(str[x]);
+        }
+    }
+    document.write(result.join(''));
+</script>
