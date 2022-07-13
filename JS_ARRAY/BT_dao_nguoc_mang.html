@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập đảo ngược mảng</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let mangx = new Array(20);
+    document.write("Mảng random có thứ tự như sau:<br>");
+    for (i = 0; i < mangx.length; i++) {
+        mangx[i] = +Math.floor(Math.random()*100);
+        document.write(mangx[i] + "&ensp;");
+    }
+    document.write("<br>Mảng đảo ngược của mảng trên như sau:<br>");
+    for (j = mangx.length-1; j >= 0; j--) {
+        document.write(mangx[j] + "&ensp;");
+    }
+</script>
