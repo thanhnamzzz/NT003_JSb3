@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng các phần tử trong mảng 2 chiều</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let a = +prompt("Nhập số lượng hàng của mảng:");
+    let b = +prompt("Nhập số lượng cột của mảng:");
+    let arr = [];//new Array(a).fill(new Array(b));
+    let total1 = 0, total2 = 0, total3 = 0;
+    // debugger;
+    document.write("Mảng 2 chiều random:");
+    for (i = 0; i < a; i++) {
+        arr[i] = [];
+        document.write("<br>");
+        for (j = 0; j < b; j++){
+            arr[i][j]= +Math.floor(Math.random()*100);
+            document.write(arr[i][j] + "&ensp;");
+            if (i == 0 || i == a - 1 || j == 0 || j == b - 1) {
+                total1 += arr[i][j];
+            }
+        }
+    }
+    document.write("<br>Tổng các số ở viền/biên của mảng trên là:" + total1);
+    // debugger;
+    let max = 0,rowmax;
+    for (i = 0; i < arr.length; i++) {
+        total2 = 0;
+        for (j = 0; j < arr[i].length; j++){
+            total2 += arr[i][j];
+            if (max < total2) {
+                max = total2;
+                rowmax = i;
+            }
+        }
+        document.write("<br>Tổng các số ở hàng " + i + " của mảng trên là:" + total2);
+    }
+    document.write("<br>Hàng có tổng số phần tử lớn nhất là hàng có id = " + rowmax);
+    for (i = 0; i < arr.length; i++) {
+        for (j = 0; j < arr[i].length; j++){
+            if (arr[i][j] % 2 == 0) {
+                total3 += arr[i][j];
+            }
+        }
+    }
+    document.write("<br>Tổng các phần tử là số chẵn của mảng trên là:" + total3);
+</script>

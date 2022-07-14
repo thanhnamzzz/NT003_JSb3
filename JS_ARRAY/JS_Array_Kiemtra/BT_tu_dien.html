@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập từ điển</title>
+</head>
+<body>
+    <h3>Simple Dictionary</h3><br>
+    <input type="text" id="texteng" placeholder="Nhập từ cần tìm"><br>
+    <button onclick="trans()">Dịch</button>
+    <p id = "result"></p>
+</body>
+</html>
+<script>
+    let array = [
+        ["apple", "banana", "tomato", "potato", "hello",],
+        ["táo", "chuối", "cà chua", "khoai tây", "xin chào",],
+    ];
+    function trans() {
+        let text1 = document.getElementById("texteng").value;
+        let numoftext0 = array[0].indexOf(text1);
+        let numoftext1 = array[1].indexOf(text1);
+        let text2;
+        if (numoftext0 != -1) {
+            text2 = array[1][numoftext0];
+        } else if (numoftext1 != -1) {
+            text2 = array[0][numoftext1];
+        } else {
+            text2 = "No data."
+        }
+        document.getElementById("result").innerHTML = text2;
+    }
+</script>
