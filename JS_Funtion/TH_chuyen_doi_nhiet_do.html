@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    <h2><b>CHUYỂN ĐỔI NHIỆT ĐỘ</b></h2>
+    <p>Nhập giá trị nhiệt độ F:</p>
+    <input type="number" name="temperature" id="temp">
+    <!-- oninput="tempConvert(this.value)"
+    onchange="tempConvert(this.value)"> -->
+    <button onclick="tempConvert()">Chuyển đổi</button><br>
+    <p>Giá trị độ C là: <span id="result"></span></p>
+</body>
+</html>
+<script>
+    function tempConvert() {
+        let tempF = document.getElementById("temp").value;
+        let tempC = 0;
+        // tempF = parseFloat(tempF);
+        tempC = ((tempF - 32) /1.8).toFixed(2);
+        document.getElementById("result").innerHTML = tempC + " độ C.";
+    }
+</script>
