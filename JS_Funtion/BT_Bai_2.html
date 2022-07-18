@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus", "A"];
+    let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let flag1 = false, flag2 = false;
+    function checkstar(star){
+        // debugger;
+        let indexst = 0;
+        let result = "";
+        for (let i = 0; i < star1.length; i++) {
+            if (star == star1[i]) {
+                indexst = i;
+                flag1 = true;
+                for (let j = 0; j < star2.length; j++) {
+                    if (indexst == j) {
+                        result = star2[j];
+                        flag2 = true;
+                    }
+                }
+            }
+        }
+        if (flag2) {
+            return result = "Chòm sao " + result + " chứa ngôi sao " + star;
+        } else if (flag1) {
+            result = "Không có chòm sao nào chứa ngôi sao " + star;
+            return result;
+        } else {
+            result = "Không có ngôi sao " + star;
+            return result;
+        }
+    }
+    let star = prompt("Nhập vào ngôi sao:");
+    document.write(checkstar(star));
+</script>
