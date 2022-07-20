@@ -11,15 +11,25 @@
 </body>
 </html>
 <script>
-    function Sum(a,b) {
-        let total = 0;
-        for (let i = a; a <= b; i++){
-            total += i;
+    function checkNumber(a) {
+        let count = 0;
+        let result= "";
+        if (a <= 1 ) {
+            result = " không là số nguyên tố.";
+        } else {
+            for (i = 1; i <= a; i++) {
+                if (a % i == 0) {
+                    count += 1;
+                }
+            }
+            if (count == 2) {
+                result = " là số nguyên tố.";
+            } else {
+                result = " không là số nguyên tố.";
+            }
         }
-        return total; 
+        return result;
     }
-        console.log("Tổng của 1 đến 10 là " + Sum(1,10));
-        console.log("Tổng của 20 đến 37 là " + Sum(20,37));
-        console.log("Tổng của 35 đến 49 là " + Sum(35,49));
-
+    let a = +prompt("Nhập số cần kiểm tra:");
+    document.write("Số "+ a + checkNumber(a));
 </script>

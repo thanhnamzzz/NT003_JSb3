@@ -11,13 +11,16 @@
 </body>
 </html>
 <script>
+    let a = +prompt("Nhập chiều dọc của mảng:");
+    let b = +prompt("Nhập chiều ngang của mảng:");
     document.write("Cho mảng 2 chiều random:<br>")
-    let arr = new Array(10).fill(new Array(10));
+    let arr = [];
     let max = 0, min = 100;
-    // debugger;
-    for (i = 0; i < arr.length; i++) {
-        for (j = 0; j < arr[i].length; j++) {
-            arr[i][j] = +Math.floor(Math.random()*100);
+    debugger;
+    for (i = 0; i < a; i++) {
+        arr[i] = [];
+        for (j = 0; j < b; j++) {
+            arr[i][j] = Math.floor(Math.random()*100);
             document.write(arr[i][j] + "&ensp;");
             if (arr[i][j] > max) {
                 max = arr[i][j];
@@ -28,6 +31,7 @@
         }
         document.write("<br>");
     }
+    // document.write(arr + "<br>");
     // for (i = 0; i < arr.length; i++) {
     //     for (j = 0; j < arr[i].length; j++) {
     //         if (arr[i][j] > max) {

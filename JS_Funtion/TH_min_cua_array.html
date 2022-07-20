@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành tìm giá trị nhỏ nhất của mảng</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let a = +prompt("Nhập chiều dọc của mảng:");
+    let b = +prompt("Nhập chiều ngang của mảng:");
+    document.write("Cho mảng 2 chiều random:<br>");
+    let result = "";
+    let arr = [];
+    // debugger;
+    for (i = 0; i < a; i++) {
+        arr[i] = [];
+        for (j = 0; j < b; j++) {
+            arr[i][j] = Math.floor(Math.random()*100);
+            document.write(arr[i][j] + "&ensp;");
+        }
+        document.write("<br>");
+    }
+    function minArray(arr) {
+        let min = 100;
+        for (x = 0; x < a; x++){
+            for (y = 0; y < b; y++) {
+                if (min > arr[x][y]) {
+                    min = arr[x][y];
+                }
+            }
+        }
+        result = "Giá trị nhỏ nhất trong mảng random trên là " + min
+        return result;
+    }
+    document.write(minArray(arr));
+</script>
