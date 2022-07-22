@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập chuyển đổi feet - meters</title>
+</head>
+<body>
+    <h2>CHUYỂN ĐỔI ĐƠN VỊ ĐO (FEET/METER)</h2>
+    <input type="number" id="length">
+    <select name="" id="unit">
+        <option value="feet">Feet</option>
+        <option value="meter">Metter</option>
+    </select>
+    <button onclick="convertUnit()">Chuyển đổi</button>
+    <p id="result"></p>
+</body>
+</html>
+<script>
+    function convertUnit() {
+        let u1 = +document.getElementById("length").value;
+        let u2 = document.getElementById("unit").value;
+        let convert = 0;
+        let result = "";
+        if (u2 == "feet") {
+            convert = u1 * 0.305;
+            result = u1 + " feet = " + convert + " meter.";
+        } else {
+            convert = u1 * 3.279;
+            result = u1 + " meter = " + convert + " feet.";
+        }
+        // return result;
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
