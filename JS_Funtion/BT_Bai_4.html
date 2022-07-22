@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let num = +prompt("Nhập bán kính đường tròn:");
+    let result = "";
+    // let result2 = "";
+    function dientich(num) {
+        let dientich = (Math.PI * num * num).toFixed(2);
+        result = "Diện tích đường tròn bán kính " + num + " là " + dientich + "<br>";
+        return result;
+    }
+    function chuvi(num) {
+        let chuvi = (Math.PI * 2 * num).toFixed(2);
+        result = "Chu vi đường tròn bán kính " + num + " là " + chuvi;
+        return result;
+    }
+    document.write(dientich(num));
+    document.write(chuvi(num));
+    // function circle(num) {
+    //     let dientich = (Math.PI * num * num).toFixed(2);
+    //     let chuvi = (Math.PI * 2 * num).toFixed(2);
+    //     result1 = "Đường tròn bán kính " + num + " có diện tích là " + dientich + " và chu vi là " + chuvi;
+    //     return result1;
+    // }
+    // document.write(circle(num)) = result1;
+</script>
