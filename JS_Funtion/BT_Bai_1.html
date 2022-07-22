@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let n1 = +prompt("Nhập tham số thứ 1:");
+    let n2 = +prompt("Nhập tham số thứ 2:");
+    let result = "";
+    function check(n1,n2) {
+        let sum = 0;
+        if (n1 > n2) {
+            result = "Tham số " + n1 + " lớn hơn tham số " + n2;
+        } else {
+            sum = n1 + n2;
+            result = "Tham số " + n1 + " nhỏ hơn tham số " + n2 + " và tổng của chúng bằng " + sum;
+        }
+        return result;
+    }
+    document.write(check(n1,n2)) = result;
+</script>
