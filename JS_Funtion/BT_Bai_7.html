@@ -11,32 +11,23 @@
 </body>
 </html>
 <script>
-    // let mang = new Array(3);
-    // let result ="";
-    // for (i = 0; i < 3;i++){
-    //     let j = i + 1;
-    //     let num = +prompt("Nhập số thứ " + j);
-    //     mang.push(num);
-    // }
-    // function check() {
-    //     debugger;
-    //     let min = mang[0];
-    //     for (i = 1; i < mang.length; i++){
-    //         if (min < mang[i]) {
-    //             min = mang[i];
-    //         }
-    //     }
-    //     result = "Số nguyên bé nhất là " + min;
-    // }
-    // document.write(check()) = result;
-    let n1 = +prompt("Nhập số thứ 1:");
-    let n2 = +prompt("Nhập số thứ 2:");
-    let n3 = +prompt("Nhập số thứ 3:");
-    let result = "";
-    function check(n1,n2,n3) {
-        let min = n1;
-        if (min < n2) {
-            
-        }
+    let mang = [];
+    let result ="";
+    for (i = 0; i < 3;i++){
+        let j = i + 1;
+        let num = +prompt("Nhập số thứ " + j);
+        mang.push(num);
     }
+    function check(mang) {
+        debugger;
+        let min = mang[0];
+        for (let i = 1; i < mang.length; i++){
+            if (min > mang[i]) {
+                min = mang[i];
+            }
+        }
+        result = "Số nguyên bé nhất là " + min;
+        return result;
+    }
+    document.write(check(mang));
 </script>
